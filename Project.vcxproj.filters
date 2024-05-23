@@ -404,10 +404,9 @@
     <ClCompile Include="Src\Application\Object\Character\Player\Player.cpp">
       <Filter>Src\Application\Object\Character\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Character\Character.cpp">
+    <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp">
       <Filter>Src\Application\Object\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Src\Framework\Shader\inc_KdCommon.hlsli">

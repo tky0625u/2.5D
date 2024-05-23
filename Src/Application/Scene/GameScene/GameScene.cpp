@@ -9,7 +9,7 @@ void GameScene::Event()
 	Math::Matrix RotX = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(m_angleX));  //角度
 	Math::Matrix Trans = Math::Matrix::CreateTranslation(m_player->GetPos() + m_pos);          //座標 (プレイヤーの少し前)
 	Math::Matrix Mat = RotX * Trans;                                                           //行列合成
-	m_camera->SetCameraMatrix(Mat);                                                            //行列セット
+ 	m_camera->SetCameraMatrix(Mat);                                                            //行列セット
 	//===========================================================================================================================
 }
 

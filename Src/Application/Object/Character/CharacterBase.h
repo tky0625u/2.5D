@@ -1,10 +1,12 @@
 ﻿#pragma once
 
-#define SPDCORREC 0.05  //スピード補正
+#define SPDCORREC 0.5f  //スピード補正
+#define FALLSPD   0.05f  //落下速度
 
 //アニメーション配列======================
-#define ANIMECUT1 4  //縦
-#define ANIMECUT2 4  //横
+#define ANIMECUT1 4    //縦
+#define ANIMECUT2 4    //横
+#define ANIMESPD 0.1f  //アニメーション速度
 //========================================
 
 //ステータス==============================
@@ -35,7 +37,8 @@ protected:
 	int   m_direc;  //縦
 	//===================================================
 
-	float size;
+	float m_size;
+	float m_angle;
 	bool m_bFlg;
 	std::shared_ptr<KdSquarePolygon> m_polygon;
 	Status status;
