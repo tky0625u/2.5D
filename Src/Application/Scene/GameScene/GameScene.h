@@ -2,6 +2,8 @@
 
 #include"../BaseScene/BaseScene.h"
 
+class Player;
+
 class GameScene : public BaseScene
 {
 public :
@@ -19,4 +21,6 @@ private:
 	float         m_ViewingAngle;  //視野角
 	Math::Vector3 m_pos;           //座標
 	//======================================
+
+	std::shared_ptr<Player> m_player;  //プレイヤー ※カメラ制御のため
 };

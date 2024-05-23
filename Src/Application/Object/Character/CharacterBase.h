@@ -24,8 +24,9 @@ public:
 	 ~CharacterBase()override{}
 
 	 virtual void Update()override = 0;
-	 virtual void GenerateDepthMapFromLight()override = 0;
-	 virtual void DrawLit()override = 0;
+	 virtual void Draw() = 0;
+	 void GenerateDepthMapFromLight()override;
+	 void DrawLit()override;
 	 virtual void Init() override = 0;
 
 protected:
@@ -34,6 +35,7 @@ protected:
 	int   m_direc;  //縦
 	//===================================================
 
+	float size;
 	bool m_bFlg;
 	std::shared_ptr<KdSquarePolygon> m_polygon;
 	Status status;

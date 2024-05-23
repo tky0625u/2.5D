@@ -16,10 +16,9 @@ public:
 	~Player()override{}
 
 	void Update()override;
-	void GenerateDepthMapFromLight()override;
-	void DrawLit()override;
+	void Draw()override;
 	void Init()override;
 
 private:
-	float size;
+
 };

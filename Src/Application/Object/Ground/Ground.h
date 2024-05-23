@@ -4,7 +4,7 @@
 class Ground :public KdGameObject
 {
 public:
-	Ground(){}
+	Ground() { Init(); }
 	~Ground()override{}
 
 	void DrawLit()override;
