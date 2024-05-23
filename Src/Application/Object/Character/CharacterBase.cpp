@@ -4,7 +4,7 @@ void CharacterBase::Update()
 {
 }
 
-void CharacterBase::DrawLit()
+void CharacterBase::GenerateDepthMapFromLight()
 {
 }
 

@@ -6,7 +6,7 @@
 #define ANIMECUT1 4  //縦
 #define ANIMECUT2 4  //横
 //========================================
-// 
+
 //ステータス==============================
 struct Status
 {
@@ -23,9 +23,10 @@ public:
 	 CharacterBase() { Init(); }
 	 ~CharacterBase()override{}
 
-	 virtual void Update()override;
-	 virtual void DrawLit()override;
-	virtual void Init() override;
+	 virtual void Update()override = 0;
+	 virtual void GenerateDepthMapFromLight()override = 0;
+	 virtual void DrawLit()override = 0;
+	 virtual void Init() override = 0;
 
 protected:
 	//アニメーション=====================================

@@ -4,6 +4,9 @@ void Player::Update()
 {
 	if (!m_bFlg)return;
 
+	if (GetAsyncKeyState(VK_UP) & 0x8000)size += 0.1f;
+	if (GetAsyncKeyState(VK_DOWN) & 0x8000)size -= 0.1f;
+
 	//アニメーション===================================================================================================
 	int Walk[ANIMECUT1][ANIMECUT2] = { {0,1,2,1},{3,4,5,4},{6,7,8,7},{9,10,11,10} };  //アニメーション配列
 	m_polygon->SetUVRect(Walk[m_direc][(int)m_anime]);                                //描画設定
@@ -50,11 +53,18 @@ void Player::Update()
 	//=================================================================================================================
 	
 	//ワールド行列　合成===============================================================================================
-	Math::Matrix Scale = Math::Matrix::CreateScale(1);              //大きさ
+	Math::Matrix Scale = Math::Matrix::CreateScale(size);              //大きさ
 	Math::Matrix Rot = Math::Matrix::CreateRotationX(0);            //回転
 	Math::Matrix Trans = Math::Matrix::CreateTranslation(m_pos);    //移動
 	m_mWorld = Scale * Rot * Trans;                                 //合成
 	//=================================================================================================================
+}
+
+void Player::GenerateDepthMapFromLight()
+{
+	if (!m_bFlg)return;
+
+	KdShaderManager::Instance().m_StandardShader.DrawPolygon(*m_polygon, m_mWorld);
 }
 
 void Player::DrawLit()
@@ -66,6 +76,7 @@ void Player::DrawLit()
 
 void Player::Init()
 {
+	size = 1.0f;
 	status = { 1,1,1,1 };
 	m_pos = { 0,0,0 };
 	m_move = Math::Vector3::Zero;
