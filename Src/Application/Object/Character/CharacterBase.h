@@ -1,5 +1,12 @@
 ﻿#pragma once
 
+#define SPDCORREC 0.05  //スピード補正
+
+//アニメーション配列======================
+#define ANIMECUT1 4  //縦
+#define ANIMECUT2 4  //横
+//========================================
+// 
 //ステータス==============================
 struct Status
 {
@@ -21,8 +28,14 @@ public:
 	virtual void Init() override;
 
 protected:
+	//アニメーション=====================================
+	float m_anime;  //横
+	int   m_direc;  //縦
+	//===================================================
+
 	bool m_bFlg;
 	std::shared_ptr<KdSquarePolygon> m_polygon;
 	Status status;
 	Math::Vector3 m_pos;
+	Math::Vector3 m_move;  //方向ベクトル
 };

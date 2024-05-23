@@ -2,7 +2,12 @@
 
 #include"../CharacterBase.h"
 
-#define SPDCORREC 0.05  //スピード補正
+//アニメーション===================
+#define UP    3  //上
+#define LEFT  1  //左
+#define RIGHT 2  //右
+#define DOWN  0  //下
+//=================================
 
 class Player :public CharacterBase
 {
