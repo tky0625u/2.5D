@@ -1,6 +1,7 @@
 ﻿#include "GameScene.h"
 #include"../SceneManager.h"
 #include"../../Object/Ground/Ground.h"
+#include"../../Object/Character/Player/Player.h"
 
 void GameScene::Event()
 {
@@ -27,4 +28,8 @@ void GameScene::Init()
 	ground->Init();                                               //初期化
 	m_objList.push_back(ground);                                  //リストに追加
 	//===========================================================================================================================
+
+	std::shared_ptr<Player> player = std::make_shared<Player>();
+	player->Init();
+	m_objList.push_back(player);
 }
