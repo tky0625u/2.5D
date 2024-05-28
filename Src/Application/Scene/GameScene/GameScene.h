@@ -17,7 +17,8 @@ private:
 	void Init() override;
 
 	//カメラ================================
-	float         m_angleX;        //角度
+	float         m_angleX;        //角度 X軸
+	float         m_angleY;        //角度 Y軸
 	float         m_ViewingAngle;  //視野角
 	Math::Vector3 m_pos;           //座標
 	//======================================

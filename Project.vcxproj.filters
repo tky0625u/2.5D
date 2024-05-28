@@ -82,6 +82,12 @@
     <Filter Include="Src\Application\Object\Character\Player">
       <UniqueIdentifier>{aadb5a89-9b71-493c-aab6-e42df0a27408}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Character\Enemy">
+      <UniqueIdentifier>{5d79b289-5b6a-427f-902c-297e9e34be67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Character\Enemy\Mob">
+      <UniqueIdentifier>{1cd2db21-c278-4a44-9c3b-9b77e45ff793}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
