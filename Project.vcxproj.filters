@@ -88,6 +88,9 @@
     <Filter Include="Src\Application\Object\Character\Enemy\Mob">
       <UniqueIdentifier>{1cd2db21-c278-4a44-9c3b-9b77e45ff793}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Character\Player\Magic">
+      <UniqueIdentifier>{1dd3e94a-c736-4444-8341-a8f593bc2bfb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -261,7 +264,10 @@
     <ClInclude Include="Src\Application\Object\Character\CharacterBase.h">
       <Filter>Src\Application\Object\Character</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Character\Player\Player.h">
+    <ClInclude Include="Src\Application\Object\Character\Player\Magic\Magic.h">
+      <Filter>Src\Application\Object\Character\Player\Magic</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Character\Player\PlayerBase.h">
       <Filter>Src\Application\Object\Character\Player</Filter>
     </ClInclude>
   </ItemGroup>
@@ -407,11 +413,14 @@
     <ClCompile Include="Src\Application\Object\Ground\Ground.cpp">
       <Filter>Src\Application\Object\Ground</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Character\Player\Player.cpp">
-      <Filter>Src\Application\Object\Character\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp">
       <Filter>Src\Application\Object\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Player\Magic\Magic.cpp">
+      <Filter>Src\Application\Object\Character\Player\Magic</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Player\PlayerBase.cpp">
+      <Filter>Src\Application\Object\Character\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

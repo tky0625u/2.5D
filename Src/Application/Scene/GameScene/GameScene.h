@@ -2,7 +2,7 @@
 
 #include"../BaseScene/BaseScene.h"
 
-class Player;
+class CharacterBase;
 
 class GameScene : public BaseScene
 {
@@ -23,5 +23,5 @@ private:
 	Math::Vector3 m_pos;           //座標
 	//======================================
 
-	std::shared_ptr<Player> m_player;  //プレイヤー ※カメラ制御のため
+	std::weak_ptr<CharacterBase> m_player;  //プレイヤー ※カメラ制御のため
 };

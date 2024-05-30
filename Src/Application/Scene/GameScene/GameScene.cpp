@@ -1,18 +1,32 @@
 ﻿#include "GameScene.h"
 #include"../SceneManager.h"
 #include"../../Object/Ground/Ground.h"
-#include"../../Object/Character/Player/Player.h"
+#include"../../Object/Character/Player/Magic/Magic.h"
 
 void GameScene::Event()
 {
 
 	//カメラ　更新===============================================================================================================
-	Math::Matrix RotX = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(m_angleX));  //角度
-	Math::Matrix RotY = Math::Matrix::CreateRotationY(DirectX::XMConvertToRadians(m_player->GetAngle()));  //角度
-	Math::Matrix Trans = Math::Matrix::CreateTranslation(m_pos);          //座標 (プレイヤーの少し前)
-	Math::Matrix PlayerTrans = Math::Matrix::CreateTranslation(m_player->GetPos());
-	Math::Matrix Mat = RotX * Trans * RotY * PlayerTrans;                                                           //行列合成
- 	m_camera->SetCameraMatrix(Mat);                                                            //行列セット
+	
+	//プレイヤー情報取得===================================
+	static float playerAngleY = 0;
+	static Math::Vector3 playerPos = {};
+	if (m_player.expired() == false)
+	{
+		playerAngleY = m_player.lock()->GetAngle();
+		playerPos = m_player.lock()->GetPos();
+	}
+	//=====================================================
+
+	//行列更新=================================================================================================================
+	Math::Matrix RotX = Math::Matrix::CreateRotationX(DirectX::XMConvertToRadians(m_angleX));      //角度
+	Math::Matrix RotY = Math::Matrix::CreateRotationY(DirectX::XMConvertToRadians(playerAngleY));  //角度
+	Math::Matrix Trans = Math::Matrix::CreateTranslation(m_pos);                                   //座標 (プレイヤーの少し前)
+	Math::Matrix PlayerTrans = Math::Matrix::CreateTranslation(playerPos);                         //プレイヤー座標
+	Math::Matrix Mat = RotX * Trans * RotY * PlayerTrans;                                          //行列合成
+ 	m_camera->SetCameraMatrix(Mat);                                                                //行列セット
+	//=========================================================================================================================
+
 	//===========================================================================================================================
 }
 
@@ -33,8 +47,8 @@ void GameScene::Init()
 	//===========================================================================================================================
 
 	//プレイヤー=================================================================================================================
-	std::shared_ptr<Player>player = std::make_shared<Player>();  //メモリ確保
-	m_player = player;                                           //プレイヤー変数に格納
-	m_objList.push_back(player);                                 //リストに追加
+	std::shared_ptr<Magic>magic = std::make_shared<Magic>();  //メモリ確保
+	m_player = magic;                                           //プレイヤー変数に格納
+	m_objList.push_back(magic);                                 //リストに追加
 	//===========================================================================================================================
 }
