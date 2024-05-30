@@ -4,14 +4,14 @@
 void TimerManager::Update()
 {
 	//タイマー=====================================================================================
-	if (m_frame >= SECOND)  //一秒たったら
+	while (m_frame >= SECOND)  //一秒以上
 	{
 		m_timerList[0]->Scroll();  //一の位
 		//切り取り範囲変更===============================================================
 		for (int i = 0; i < m_timerList.size(); ++i)
 		{
 			//それ以外
-			if (i != 1 && i != m_timerList.size())
+			if (i != 1 && i != m_timerList.size()-1)
 			{
 				if (m_timerList[i]->GetCutX() >= TIMERWIDESIZE * MAXNUM)  //端（9）まで来たら
 				{
@@ -29,7 +29,7 @@ void TimerManager::Update()
 				}
 			}
 			//右端
-			else if (i == m_timerList.size())
+			else if (i == m_timerList.size()-1)
 			{
 				if (m_timerList[i]->GetCutX() >= TIMERWIDESIZE * MAXNUM)
 				{
@@ -38,13 +38,14 @@ void TimerManager::Update()
 					std::shared_ptr<Timer> timer = std::make_shared<Timer>();
 					timer->Init();
 					timer->SetPos(i + 1,m_pos);
+					timer->Scroll();
 					m_timerList.push_back(timer);
 					//===========================================================
 				}
 			}
 		}
 		//===============================================================================
-		m_frame = 0;  //0にする
+		m_frame -= SECOND;  //一秒分マイナス
 	}
 
 	for (int i = 0; i < m_timerList.size(); ++i)
@@ -93,5 +94,5 @@ void TimerManager::Init()
 	}
 	//==============================================================================================
 
-	m_frame = 0;  //フレーム
+	m_frame = SECOND * SECOND * 0;  //フレーム
 }
