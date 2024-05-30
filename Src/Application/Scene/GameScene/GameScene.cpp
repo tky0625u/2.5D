@@ -2,6 +2,7 @@
 #include"../SceneManager.h"
 #include"../../Object/Ground/Ground.h"
 #include"../../Object/Character/Player/Magic/Magic.h"
+#include"../../Object/UI/Timer/TimerManager.h"
 
 void GameScene::Event()
 {
@@ -48,7 +49,12 @@ void GameScene::Init()
 
 	//プレイヤー=================================================================================================================
 	std::shared_ptr<Magic>magic = std::make_shared<Magic>();  //メモリ確保
-	m_player = magic;                                           //プレイヤー変数に格納
-	m_objList.push_back(magic);                                 //リストに追加
+	m_player = magic;                                         //プレイヤー変数に格納
+	m_objList.push_back(magic);                               //リストに追加
+	//===========================================================================================================================
+
+	//タイマー===================================================================================================================
+	std::shared_ptr<TimerManager>timer = std::make_shared<TimerManager>();  //メモリ確保
+	m_objList.push_back(timer);                               //リストに追加
 	//===========================================================================================================================
 }

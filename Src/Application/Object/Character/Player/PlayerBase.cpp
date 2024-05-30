@@ -4,8 +4,8 @@ void PlayerBase::Update()
 {
 
 	//アニメーション===================================================================================================
-	int Walk[ANIMECUT1] = { 9,10,11,10 };  //アニメーション配列
-	m_polygon->SetUVRect(Walk[(int)m_anime]);                                //描画設定
+	int Walk[ANIMECUT1] = { 9,10,11,10 };                                             //アニメーション配列
+	m_polygon->SetUVRect(Walk[(int)m_anime]);                                         //描画設定
 	m_anime += ANIMESPD;                                                              //アニメーション処理
 	if (m_anime >= ANIMECUT1)m_anime = 0;                                             //最後まできたら最初に戻す
 	if (m_move == Math::Vector3::Zero)m_anime = 1;                                    //立ち止まり
