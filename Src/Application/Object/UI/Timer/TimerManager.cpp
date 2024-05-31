@@ -36,9 +36,9 @@ void TimerManager::Update()
 					m_timerList[i]->Reset();
 					//新しく追加　※カンスト防止=================================
 					std::shared_ptr<Timer> timer = std::make_shared<Timer>();
-					timer->Init();
 					timer->SetPos(i + 1,m_pos);
-					timer->Scroll();
+					timer->SetTexture(&m_timerTex);
+					timer->Scroll();  //1から表示させるため
 					m_timerList.push_back(timer);
 					//===========================================================
 				}
@@ -85,11 +85,12 @@ void TimerManager::Init()
 	//=============================================================================================
 
 	//タイマー=====================================================================================
+	m_timerTex.Load("Asset/Textures/UI/Timer/number.png");
 	for (int i = 0; i < DEFAULT; ++i)
 	{
 		std::shared_ptr<Timer> timer = std::make_shared<Timer>();
-		timer->Init();
 		timer->SetPos(i,m_pos);
+		timer->SetTexture(&m_timerTex);
 		m_timerList.push_back(timer);
 	}
 	//==============================================================================================

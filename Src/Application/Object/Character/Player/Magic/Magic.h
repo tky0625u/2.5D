@@ -2,6 +2,8 @@
 
 #include"../PlayerBase.h"
 
+class Ult;
+
 class Magic :public PlayerBase
 {
 public:
@@ -10,8 +12,11 @@ public:
 
 	void Update()override;
 	void Draw()override;
+	void DrawLit()override;
+	void DrawBright()override;
 	void Init()override;
 
 private:
-
+	std::shared_ptr<Ult> m_ult;
+	bool                 m_bUlt;
 };

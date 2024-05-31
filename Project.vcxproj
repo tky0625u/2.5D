@@ -159,6 +159,7 @@
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Object\Character\CharacterBase.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Magic.h" />
+    <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\PlayerBase.h" />
     <ClInclude Include="Src\Application\Object\Ground\Ground.h" />
     <ClInclude Include="Src\Application\Object\UI\Timer\Timer.h" />
@@ -215,6 +216,7 @@
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Magic.cpp" />
+    <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\PlayerBase.cpp" />
     <ClCompile Include="Src\Application\Object\Ground\Ground.cpp" />
     <ClCompile Include="Src\Application\Object\UI\Timer\Timer.cpp" />

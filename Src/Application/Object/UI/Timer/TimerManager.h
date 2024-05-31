@@ -26,4 +26,6 @@ private:
 	Math::Rectangle m_rect;
 	Math::Matrix    m_Mat;
 	KdTexture       m_Tex;
+
+	KdTexture       m_timerTex;
 };

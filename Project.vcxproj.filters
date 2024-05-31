@@ -97,6 +97,15 @@
     <Filter Include="Src\Application\Object\UI\Timer">
       <UniqueIdentifier>{6fd95579-06e1-40b2-a59f-e164389344a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Character\Player\Magic\Skill">
+      <UniqueIdentifier>{2678b55a-7ca8-4696-9621-b3ce97b3da2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Character\Player\Magic\Skill\Ult">
+      <UniqueIdentifier>{4a4e4a02-d7a8-4a0a-8480-108048c6079e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Character\Player\Magic\Skill\Normal">
+      <UniqueIdentifier>{299fda98-daae-4fe8-a41b-368cdec9c31f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -282,6 +291,9 @@
     <ClInclude Include="Src\Application\Object\UI\Timer\TimerManager.h">
       <Filter>Src\Application\Object\UI\Timer</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.h">
+      <Filter>Src\Application\Object\Character\Player\Magic\Skill\Ult</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -439,6 +451,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\UI\Timer\TimerManager.cpp">
       <Filter>Src\Application\Object\UI\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.cpp">
+      <Filter>Src\Application\Object\Character\Player\Magic\Skill\Ult</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
