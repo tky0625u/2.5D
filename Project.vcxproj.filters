@@ -106,6 +106,12 @@
     <Filter Include="Src\Application\Object\Character\Player\Magic\Skill\Normal">
       <UniqueIdentifier>{299fda98-daae-4fe8-a41b-368cdec9c31f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn">
+      <UniqueIdentifier>{a6c12a64-f26e-40a1-8786-5e922580b161}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\WindowUi">
+      <UniqueIdentifier>{5f089e21-489c-4e59-b0db-29cb47694249}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -294,6 +300,12 @@
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.h">
       <Filter>Src\Application\Object\Character\Player\Magic\Skill\Ult</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.h">
+      <Filter>Src\Application\Object\Character\Player\Magic\Skill\CutIn</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\WindowUI\WindowUI.h">
+      <Filter>Src\Application\WindowUi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -454,6 +466,9 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.cpp">
       <Filter>Src\Application\Object\Character\Player\Magic\Skill\Ult</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.cpp">
+      <Filter>Src\Application\Object\Character\Player\Magic\Skill\CutIn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -159,6 +159,7 @@
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Object\Character\CharacterBase.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Magic.h" />
+    <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\PlayerBase.h" />
     <ClInclude Include="Src\Application\Object\Ground\Ground.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h" />
     <ClInclude Include="Src\Application\Scene\SceneManager.h" />
     <ClInclude Include="Src\Application\Scene\TitleScene\TitleScene.h" />
+    <ClInclude Include="Src\Application\WindowUI\WindowUI.h" />
     <ClInclude Include="Src\Framework\Direct3D\KdMaterial.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdPolygon.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdSquarePolygon.h" />
@@ -216,6 +218,7 @@
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Magic.cpp" />
+    <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Ult\Ult.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\PlayerBase.cpp" />
     <ClCompile Include="Src\Application\Object\Ground\Ground.cpp" />
