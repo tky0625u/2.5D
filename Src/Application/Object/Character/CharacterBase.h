@@ -49,6 +49,7 @@ protected:
 
 	Status status;                               //ステータス
 	CharaType type;                              //キャラタイプ
+	int   m_Atk;                                 //攻撃力
 	float m_size;                                //サイズ
 	float m_angle;                               //角度
 	bool m_bFlg;                                 //生存フラグ

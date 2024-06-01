@@ -32,7 +32,9 @@ void Magic::Update()
 			//必殺技生成
 			m_ult = std::make_shared<Ult>();  //生成
 			m_ult->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * DEFAULTPOS,m_pos.y,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * DEFAULTPOS });  //座標 ※プレイヤーの少し前
+			m_ult->SetCirclePos(m_pos);
 			m_ult->SetAngle(m_angle);  //角度　※プレイヤーの目の前に来るように
+			m_ult->SetAtk(status.Atk); //攻撃力
 			m_bUlt = true; //フラグオン　※二度撃ち防止
 		}
 		else if(m_cutIn != nullptr)
@@ -51,6 +53,7 @@ void Magic::Update()
 		else m_bStop = false;
 
 		m_ult->Update();
+		m_ult->SetCirclePos(m_pos);
 
 		if (m_ult->IsExpired())  //消滅したらリセット
 		{

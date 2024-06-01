@@ -81,6 +81,7 @@ void PlayerBase::Draw()
 void PlayerBase::Init()
 {
 	type = CharaType(CharaType::Player);
+	m_Atk = 0;
 	m_size = 1.0f;
 	m_angle = 0.0f;
 	m_pos = Math::Vector3::Zero;
