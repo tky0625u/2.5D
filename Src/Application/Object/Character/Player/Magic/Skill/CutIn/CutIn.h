@@ -22,6 +22,7 @@ public:
 	CutIn() { Init(); }
 	~CutIn()override {}
 
+	void PreUpdate()override;
 	void Update()override;
 	void DrawSprite()override;
 	void Init()override;

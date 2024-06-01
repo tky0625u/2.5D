@@ -1,7 +1,7 @@
 ﻿#include "CutIn.h"
 #include"../../../../../../WindowUI/WindowUI.h"
 
-void CutIn::Update()
+void CutIn::PreUpdate()
 {
 	//カットインのサイズ増減========================================
 	if (fluctFlg)m_size += FLUCT;         //増減フラグがtrueで増加
@@ -38,7 +38,7 @@ void CutIn::Update()
 		}
 		//================================================================
 
-		if(m_PlayerPos.x>PlayerMax)fluctFlg = false;//プレイヤー画像が画面から出たらたったら増減フラグをfalse
+		if (m_PlayerPos.x > PlayerMax)fluctFlg = false;//プレイヤー画像が画面から出たらたったら増減フラグをfalse
 	}
 	else if (!fluctFlg && m_size <= CUTINSIZEMIN)
 	{
@@ -47,7 +47,10 @@ void CutIn::Update()
 	//===================================================================================================
 
 	m_rect = { 0,cutY,WIDE,CUTINHIGHT };
+}
 
+void CutIn::Update()
+{
 	m_scale = Math::Matrix::CreateScale(1, m_size, 1);
 	m_trans = Math::Matrix::CreateTranslation(m_pos);
 	m_mat = m_scale * m_trans;

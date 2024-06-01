@@ -1,8 +1,7 @@
 ﻿#include "PlayerBase.h"
 
-void PlayerBase::Update()
+void PlayerBase::PreUpdate()
 {
-
 	//アニメーション===================================================================================================
 	int Walk[ANIMECUT1] = { 9,10,11,10 };                                             //アニメーション配列
 	m_polygon->SetUVRect(Walk[(int)m_anime]);                                         //描画設定
@@ -64,7 +63,10 @@ void PlayerBase::Update()
 		m_isExpired = true;
 	}
 	//=================================================================================================================
+}
 
+void PlayerBase::Update()
+{
 	//ワールド行列　合成===============================================================================================
 	Math::Matrix Scale = Math::Matrix::CreateScale(m_size);       //大きさ
 	Math::Matrix Rot = Math::Matrix::CreateRotationY(DirectX::XMConvertToRadians(m_angle));    //回転

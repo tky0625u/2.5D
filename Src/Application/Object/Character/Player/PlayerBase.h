@@ -8,6 +8,7 @@ public:
 	PlayerBase() { Init(); }
 	~PlayerBase()override{}
 
+	virtual void PreUpdate()override = 0;
 	virtual void Update()override = 0;
 	virtual void Draw()override = 0;
 	virtual void Init()override = 0;

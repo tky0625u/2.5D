@@ -33,6 +33,7 @@ public:
 	 CharacterBase() {}
 	 ~CharacterBase()override{}
 
+	 virtual void PreUpdate()override = 0;
 	 virtual void Update()override = 0;
 	 virtual void Draw() = 0;
 	 void GenerateDepthMapFromLight()override;
