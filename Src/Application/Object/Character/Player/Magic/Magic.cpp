@@ -69,6 +69,7 @@ void Magic::PreUpdate()
 			if (m_circle[ULT] != nullptr)
 			{
 				m_circle[ULT]->PreUpdate();
+				m_circle[ULT]->RotationY();
 				m_circle[ULT]->SizeDOWN();
 				m_circle[ULT]->SetPos({ m_pos.x,m_pos.y + 0.1f,m_pos.z });
 			
@@ -135,6 +136,7 @@ void Magic::PreUpdate()
 			m_circle[NORMAL]->SetAngleY(m_angle);
 			m_circle[NORMAL]->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });
 			//=========================================================================
+			m_circle[NORMAL]->RotationZ();
 			m_circle[NORMAL]->PreUpdate();
 			if (m_circle[NORMAL]->IsExpired())
 			{

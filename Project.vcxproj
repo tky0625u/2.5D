@@ -158,6 +158,8 @@
     <ClInclude Include="..\Library\tinygltf\tiny_gltf.h" />
     <ClInclude Include="Src\Application\main.h" />
     <ClInclude Include="Src\Application\Object\Character\CharacterBase.h" />
+    <ClInclude Include="Src\Application\Object\Character\Enemy\EnemyBase.h" />
+    <ClInclude Include="Src\Application\Object\Character\Enemy\EnemyManager\EnemyManager.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Magic.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Circle\Circle.h" />
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.h" />
@@ -219,6 +221,8 @@
     <ClCompile Include="..\Library\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Src\Application\main.cpp" />
     <ClCompile Include="Src\Application\Object\Character\CharacterBase.cpp" />
+    <ClCompile Include="Src\Application\Object\Character\Enemy\EnemyBase.cpp" />
+    <ClCompile Include="Src\Application\Object\Character\Enemy\EnemyManager\EnemyManager.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Magic.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Circle\Circle.cpp" />
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\CutIn\CutIn.cpp" />

@@ -26,7 +26,7 @@ public:
 	void DrawSprite()override;
 	void Init()override;
 
-	const bool GetShot()const { return m_bStop; }
+	const bool GetStop()const { return m_bStop; }
 
 private:
 	//カットイン===========================================

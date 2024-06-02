@@ -18,6 +18,8 @@ public:
 
 	void SizeUP() { m_size += CicleSizeUP; }
 	void SizeDOWN() { m_size -= CicleSizeDown; }
+	void RotationY();
+	void RotationZ();
 
 	void SetPos(Math::Vector3 a_pos) { m_pos = a_pos; }
 	void SetSizeMAX(float a_SizeMAX) { m_SizeMAX = a_SizeMAX; }
@@ -33,4 +35,5 @@ private:
 	float                            m_SizeMAX;
 	float                            m_angleX;
 	float                            m_angleY;
+	float                            m_angleZ;
 };

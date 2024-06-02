@@ -13,8 +13,9 @@ void Normal::PreUpdate()
 
 void Normal::Update()
 {
+	Math::Matrix Scale = Math::Matrix::CreateScale(0.5f);
 	Math::Matrix Trans = Math::Matrix::CreateTranslation(m_pos);
-	m_mWorld = Trans;
+	m_mWorld = Scale * Trans;
 }
 
 void Normal::Draw()

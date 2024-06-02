@@ -115,6 +115,9 @@
     <Filter Include="Src\Application\Object\Character\Player\Magic\Skill\Circle">
       <UniqueIdentifier>{16aafc14-a8a5-4636-9b2a-b9ad5197fa07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Character\Enemy\EnemyMnager">
+      <UniqueIdentifier>{32025163-2aed-48cc-b8a7-47d32d3d6064}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -315,6 +318,12 @@
     <ClInclude Include="Src\Application\Object\Character\Player\Magic\Skill\Circle\Circle.h">
       <Filter>Src\Application\Object\Character\Player\Magic\Skill\Circle</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\Object\Character\Enemy\EnemyManager\EnemyManager.h">
+      <Filter>Src\Application\Object\Character\Enemy\EnemyMnager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Character\Enemy\EnemyBase.h">
+      <Filter>Src\Application\Object\Character\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -484,6 +493,12 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Character\Player\Magic\Skill\Circle\Circle.cpp">
       <Filter>Src\Application\Object\Character\Player\Magic\Skill\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Enemy\EnemyManager\EnemyManager.cpp">
+      <Filter>Src\Application\Object\Character\Enemy\EnemyMnager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Character\Enemy\EnemyBase.cpp">
+      <Filter>Src\Application\Object\Character\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

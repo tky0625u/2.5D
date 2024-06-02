@@ -3,6 +3,7 @@
 #include"../BaseScene/BaseScene.h"
 
 class CharacterBase;
+class EnemyManager;
 
 class GameScene : public BaseScene
 {
@@ -24,4 +25,5 @@ private:
 	//======================================
 
 	std::weak_ptr<CharacterBase> m_player;  //プレイヤー ※カメラ制御のため
+	std::weak_ptr<EnemyManager> m_EnemyManager;
 };

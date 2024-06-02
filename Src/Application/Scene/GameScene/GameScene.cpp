@@ -3,6 +3,7 @@
 #include"../../Object/Ground/Ground.h"
 #include"../../Object/Character/Player/Magic/Magic.h"
 #include"../../Object/UI/Timer/TimerManager.h"
+#include"../../Object/Character/Enemy/EnemyManager/EnemyManager.h"
 
 void GameScene::Event()
 {
@@ -16,6 +17,7 @@ void GameScene::Event()
 	{
 		playerAngleY = m_player.lock()->GetAngle();
 		playerPos = m_player.lock()->GetPos();
+		m_EnemyManager.lock()->SetPlayerPos(playerPos);
 	}
 	//=====================================================
 
@@ -51,6 +53,12 @@ void GameScene::Init()
 	std::shared_ptr<Magic>magic = std::make_shared<Magic>();  //メモリ確保
 	m_player = magic;                                         //プレイヤー変数に格納
 	m_objList.push_back(magic);                               //リストに追加
+	//===========================================================================================================================
+
+	//敵=========================================================================================================================
+	std::shared_ptr<EnemyManager>enemy = std::make_shared<EnemyManager>();  //メモリ確保
+	m_EnemyManager = enemy;                                                 //敵変数に格納
+	m_objList.push_back(enemy);                                             //リストに追加
 	//===========================================================================================================================
 
 	//タイマー===================================================================================================================
