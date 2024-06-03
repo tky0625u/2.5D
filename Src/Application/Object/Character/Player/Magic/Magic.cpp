@@ -103,14 +103,14 @@ void Magic::PreUpdate()
 				m_circle[NORMAL] = std::make_shared<Circle>();  //生成
 				m_circle[NORMAL]->SetAngleX(NORMALCircleAngleX);                 //角度X
 				m_circle[NORMAL]->SetAngleY(m_angle);           //角度Y
-				m_circle[NORMAL]->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y+0.1f,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });  //座標　※プレイヤーの少し前
+				m_circle[NORMAL]->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y+1.0f,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });  //座標　※プレイヤーの少し前
 			}
 			//===================================================================
 			if (m_CoolTime <= 0 && m_circle[NORMAL]->GetSize()>=NORMALCircleSizeMAX)  //クールタイムが終わったらAND魔法陣が大きくなったら
 			{
 				std::shared_ptr<Normal>normal = std::make_shared<Normal>();
 				normal->SetModel(m_NormalModel);
-				normal->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });  //座標 ※プレイヤーの少し前
+				normal->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y+1.0f,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });  //座標 ※プレイヤーの少し前
 				normal->SetAngle(m_angle);  //角度　※プレイヤーの目の前に来るように
 				normal->SetAtk(status.Atk); //攻撃力
 				m_NormalList.push_back(normal);  //リスト追加
@@ -134,7 +134,7 @@ void Magic::PreUpdate()
 
 			//プレイヤーの正面に来るように=============================================
 			m_circle[NORMAL]->SetAngleY(m_angle);
-			m_circle[NORMAL]->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });
+			m_circle[NORMAL]->SetPos({ m_pos.x + sin(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS,m_pos.y+1.0f,m_pos.z + cos(DirectX::XMConvertToRadians(m_angle)) * NORMALDEFAULTPOS });
 			//=========================================================================
 			m_circle[NORMAL]->RotationZ();
 			m_circle[NORMAL]->PreUpdate();
