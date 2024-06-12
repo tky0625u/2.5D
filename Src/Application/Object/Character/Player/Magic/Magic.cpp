@@ -95,7 +95,7 @@ void Magic::PreUpdate()
 	if (!m_bStop)
 	{
 		//通常技=======================================================================================================================================================================================
-		if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+		if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
 		{
 			//魔法陣=============================================================
 			if (m_circle[NORMAL] == nullptr)
@@ -180,6 +180,14 @@ void Magic::Update()
 	//プレイヤー============================
 	PlayerBase::Update();
 	//======================================
+
+	POINT Cursor;
+	GetCursorPos(&Cursor);
+	if (Cursor.x != m_OldCursorPos.x)
+	{
+		m_angle += (Cursor.x - m_OldCursorPos.x) * 0.2f;
+		m_OldCursorPos.x = Cursor.x;
+	}
 
 	//魔法陣================================
 	for (int i = 0; i < CircleNum; ++i)
@@ -271,4 +279,6 @@ void Magic::Init()
 
 	m_bUlt = false;   //必殺技
 	m_bStop = false;  //停止
+
+	m_OldCursorPos = Math::Vector2::Zero;
 }
